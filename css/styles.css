@@ -1,0 +1,76 @@
+.site-header {
+  color: #fff;
+  background-color: #2b3844;
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.theme-toggle-btn::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url("../img/icon-moon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 430px) {
+  .site-header .h4 {
+    font-size: 14px;
+  }
+}
+
+.site-content {
+  background-color: #202c36;
+}
+
+.site-actions {
+  margin-bottom: 48px;
+}
+
+.site-actions .form-control {
+  padding-left: 74px;
+  background-color: #2b3844;
+  background-repeat: no-repeat;
+  background-position: left 32px center;
+  background-size: 18px;
+  background-image: url("../img/icon-search.svg");
+}
+
+.site-actions .form-control:focus {
+  background-color: #2b3844;
+}
+
+.site-actions__select {
+  padding: 14px 24px;
+  color: #fff;
+  background-color: #2b3844;
+  border: none;
+}
+
+@media screen and (max-width: 550px) {
+  .site-actions__select {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .site-actions .form-control {
+    width: 480px;
+  }
+}
+
+.countries .col {
+  width: 264px;
+  height: 336px;
+  background-color: #2B3844;
+}
+
+.col__inner {
+  padding: 24px;
+}
