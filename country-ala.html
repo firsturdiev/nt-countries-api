@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="h-100 d-flex flex-column bg-white">
+  <!-- SITE-HEADER -->
+
+  <header class="site-header py-4 bg-light shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="text-dark font-weight-bold" href="./">Where in the world?</a>
+      <button class="site-header__toggle btn btn-sm btn-white" type="button">Dark Mode</button>
+    </div>
+  </header>
+
+
+  <!-- SITE-CONTENT -->
+
+  <main class="site-content flex-grow-1 py-4 px-3 container">
+    <div class="row mb-4 mx-0">
+      <a class="back-btn btn btn-white shadow-sm" href="./">Back</a>
+    </div>
+
+    <div class="country row flex-column flex-md-row justify-content-lg-between align-items-start mx-0 flex-nowrap">
+      <img class="country__flag mb-4 mb-md-0 flex-md-grow-1 flex-lg-grow-0 mr-md-4" src="./img/flag-ala.png" width="320" alt="Flag of Germany">
+
+      <div class="country__info">
+        <h3 class="mb-4">Åland Islands</h3>
+        <div class="mb-4 d-lg-flex ">
+          <dl class="country__info-list mb-4 mr-lg-5">
+            <div class="d-flex">
+              <dt class="font-weight-bold mr-1">Native Name:</dt>
+              <dd>Belgium</dd>
+            </div>
+            <div class="d-flex">
+              <dt class="font-weight-bold mr-1">Population:</dt>
+              <dd>11,319,511</dd>
+            </div>
+            <div class="d-flex">
+              <dt class="font-weight-bold mr-1">Region:</dt>
+              <dd>Europe</dd>
+            </div>
+            <div class="d-flex">
+              <dt class="font-weight-bold mr-1">Sub Region:</dt>
+              <dd>Western Europe</dd>
+            </div>
+            <div class="d-flex">
+              <dt class="font-weight-bold mr-1">Capital:</dt>
+              <dd>Brussels</dd>
+            </div>
+          </dl>
+          <dl class="country__info-list">
+            <div class="d-flex">
+              <dt class="font-weight-bold mr-1">Top Level Domain:</dt>
+              <dd>.be</dd>
+            </div>
+            <div class="d-flex">
+              <dt class="font-weight-bold mr-1">Currencies:</dt>
+              <dd>Euro</dd>
+            </div>
+            <div class="d-flex">
+              <dt class="font-weight-bold mr-1">Languages:</dt>
+              <dd>Dutch, French, German</dd>
+            </div>
+          </dl>
+        </div>
+        <div>
+          <h3 class="mb-3">Border Countries: </h3>
+          <ul class="d-flex list-unstyled">
+            <li>
+              <button class="btn btn-sm shadow-sm px-4 mr-2" type="button">France</button>
+            </li>
+            <li>
+              <button class="btn btn-sm shadow-sm px-4 mr-2" type="button">Germany</button>
+            </li>
+            <li>
+              <button class="btn btn-sm shadow-sm px-4 mr-2" type="button">Netherlands</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- SITE-FOOTER -->
+
+  <footer class="site-footer mt-auto"></footer>
+</body>
+
+</html>
