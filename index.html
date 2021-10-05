@@ -8,6 +8,12 @@
   <title>Document</title>
   <link rel="stylesheet" href="src/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
 </head>
 
 <body class="h-100 d-flex flex-column bg-white">
@@ -24,226 +30,93 @@
   <!-- SITE-CONTENT -->
 
   <main class="site-content flex-grow-1 py-4 container">
-    <form class="search-form row justify-content-between mx-0 mb-5" action="https://echo.htmlacademy.ru" method="get">
+    <form class="search-form row justify-content-between mx-0 mb-5" action="https://echo.htmlacademy.ru" method="GET">
       <input class="col-sm-6 search-form__input form-control border-0 shadow-sm mb-4 mb-sm-0 py-4" type="search"
-        placeholder="Search for a country…" name="q">
-      <select class="col-7 col-sm-4 custom-select border-0 shadow-sm h-auto" name="region">
+        placeholder="Search for a country…" name="q" minlength="1" required>
+      <select class="search-form__select col-7 col-sm-4 custom-select border-0 shadow-sm h-auto" name="region">
         <option value="" selected disabled>Filter by Region</option>
         <option value="africa">Africa</option>
-        <option value="america">America</option>
+        <option value="americas">Americas</option>
         <option value="asia">Asia</option>
         <option value="europe">Europe</option>
         <option value="oceania">Oceania</option>
       </select>
     </form>
 
-    <ul class="countries list-unstyled row" aria-label="Countries list">
-      <li class="col-sm-6 col-md-4 col-xl-3 mb-4 d-flex justify-content-center">
-        <div class="position-relative w-auto rounded overflow-hidden bg-white shadow-sm">
-          <a class="stretched-link" href="./country-deu.html">
-            <img class="d-block mb-3" src="./img/flag-deu.png" width="264" height="160" alt="Flag of Germany">
-          </a>
-          <div class="country__inner p-3">
-            <h3 class="h4 mb-3">Germany</h3>
-            <dl class="country__info mb-0">
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Population:</dt>
-                <dd>81,770,900</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Region:</dt>
-                <dd>Europe</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Capital:</dt>
-                <dd>Berlin</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-sm-6 col-md-4 col-xl-3 mb-4 d-flex justify-content-center">
-        <div class="position-relative w-auto rounded overflow-hidden bg-white shadow-sm">
-          <a class="stretched-link" href="./country-usa.html">
-            <img class="d-block mb-3" src="./img/flag-usa.png" width="264" height="160" alt="Flag of USA">
-          </a>
-          <div class="country__inner p-3">
-            <h3 class="h4 mb-3">United States of America</h3>
-            <dl class="country__info mb-0">
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Population:</dt>
-                <dd>323,947,000</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Region:</dt>
-                <dd>Americas</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Capital:</dt>
-                <dd>Washinton, D.C.</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-sm-6 col-md-4 col-xl-3 mb-4 d-flex justify-content-center">
-        <div class="position-relative w-auto rounded overflow-hidden bg-white shadow-sm">
-          <a class="stretched-link" href="./country-bra.html">
-            <img class="d-block mb-3" src="./img/flag-bra.png" width="264" height="160" alt="Flag of Brazil">
-          </a>
-          <div class="country__inner p-3">
-            <h3 class="h4 mb-3">Brazil</h3>
-            <dl class="country__info mb-0">
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Population:</dt>
-                <dd>206,135,893</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Region:</dt>
-                <dd>Americas</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Capital:</dt>
-                <dd>Brasília</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-sm-6 col-md-4 col-xl-3 mb-4 d-flex justify-content-center">
-        <div class="position-relative w-auto rounded overflow-hidden bg-white shadow-sm">
-          <a class="stretched-link" href="./country-isl.html">
-            <img class="d-block mb-3" src="./img/flag-isl.png" width="264" height="160" alt="Flag of Iceland">
-          </a>
-          <div class="country__inner p-3">
-            <h3 class="h4 mb-3">Iceland</h3>
-            <dl class="country__info mb-0">
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Population:</dt>
-                <dd>334,300</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Region:</dt>
-                <dd>Europe</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Capital:</dt>
-                <dd>Reykjavík</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-sm-6 col-md-4 col-xl-3 mb-4 d-flex justify-content-center">
-        <div class="position-relative w-auto rounded overflow-hidden bg-white shadow-sm">
-          <a class="stretched-link" href="./country-afg.html">
-            <img class="d-block mb-3" src="./img/flag-afg.png" width="264" height="160" alt="Flag of Afghanistan">
-          </a>
-          <div class="country__inner p-3">
-            <h3 class="h4 mb-3">Afghanistan</h3>
-            <dl class="country__info mb-0">
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Population:</dt>
-                <dd>27,657,145</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Region:</dt>
-                <dd>Asia</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Capital:</dt>
-                <dd>Kabul</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-sm-6 col-md-4 col-xl-3 mb-4 d-flex justify-content-center">
-        <div class="position-relative w-auto rounded overflow-hidden bg-white shadow-sm">
-          <a class="stretched-link" href="./country-ala.html">
-            <img class="d-block mb-3" src="./img/flag-ala.png" width="264" height="160" alt="Flag of Åland Islands">
-          </a>
-          <div class="country__inner p-3">
-            <h3 class="h4 mb-3">Åland Islands</h3>
-            <dl class="country__info mb-0">
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Population:</dt>
-                <dd>28,875</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Region:</dt>
-                <dd>Europe</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Capital:</dt>
-                <dd>Mariehamn</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-sm-6 col-md-4 col-xl-3 mb-4 d-flex justify-content-center">
-        <div class="position-relative w-auto rounded overflow-hidden bg-white shadow-sm">
-          <a class="stretched-link" href="./country-alb.html">
-            <img class="d-block mb-3" src="./img/flag-alb.png" width="264" height="160" alt="Flag of Albania">
-          </a>
-          <div class="country__inner p-3">
-            <h3 class="h4 mb-3">Albania</h3>
-            <dl class="country__info mb-0">
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Population:</dt>
-                <dd>2,886,026</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Region:</dt>
-                <dd>Europe</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Capital:</dt>
-                <dd>Tirana</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-sm-6 col-md-4 col-xl-3 mb-4 d-flex justify-content-center">
-        <div class="position-relative w-auto rounded overflow-hidden bg-white shadow-sm">
-          <a class="stretched-link" href="./country-dza.html">
-            <img class="d-block mb-3" src="./img/flag-dza.png" width="264" height="160" alt="Flag of Algeria">
-          </a>
-          <div class="country__inner p-3">
-            <h3 class="h4 mb-3">Algeria</h3>
-            <dl class="country__info mb-0">
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Population:</dt>
-                <dd>40,400,000</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Region:</dt>
-                <dd>Africa</dd>
-              </div>
-              <div class="country__item d-flex">
-                <dt class="font-weight-bold mr-1">Capital:</dt>
-                <dd>Algiers</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </li>
-    </ul>
+    <ul class="countries-list list-unstyled row" aria-label="Countries list"></ul>
   </main>
 
+  <!-- MODALS -->
 
-  <!-- SITE-FOOTER -->
+  <div class="modal fade" id="countryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="country row d-flex flex-wrap justify-content-between">
+            <div class="col-sm-12 col-lg-4">
+              <img class="rounded country__img" width="220" height="150">
+            </div>
+            <div class="col-sm-12 col-lg-8">
+              <div class="country__content mt-2 mt-md-0">
+                <h3 class="country__title mb-3"></h3>
+                <div class="d-flex flex-wrap justify-content-between">
+                  <dl class="country__info">
+                    <div class="country__info-item">
+                      <dt>Region:</dt>
+                      <dd class="country__info-item--region"></dd>
+                    </div>
+                    <div class="country__info-item">
+                      <dt>Currency:</dt>
+                      <dd class="country__info-item--currency"></dd>
+                    </div>
+                    <div class="country__info-item">
+                      <dt>Borders:</dt>
+                      <dd class="country__info-item--borders"></dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <footer class="site-footer mt-auto"></footer>
+  <!-- TEMPLATES -->
+
+  <template id="countryTemp">
+    <li class="country col-sm-6 col-md-4 col-xl-3 mb-4 d-flex justify-content-center">
+      <div class="w-auto rounded overflow-hidden bg-white shadow-sm">
+        <div class="country__img-wrapper">
+          <img class="country__img d-block">
+        </div>
+        <div class="country__inner p-3">
+          <a class="country__title h4 mb-1 d-block text-truncate btn-link text-body font-weight-bold"
+            aria-level="3"></a>
+          <dl class="country__info-list mb-1">
+            <div class="d-flex">
+              <dt class="font-weight-bold mr-1">Population:</dt>
+              <dd class="country__info-item country__info-item--population"></dd>
+            </div>
+            <div class="d-flex">
+              <dt class="font-weight-bold mr-1">Region:</dt>
+              <dd class="country__info-item country__info-item--region"></dd>
+            </div>
+            <div class="d-flex">
+              <dt class="font-weight-bold mr-1">Capital:</dt>
+              <dd class="country__info-item country__info-item--capital text-truncate"></dd>
+            </div>
+          </dl>
+
+          <button class="js-more-info btn btn-primary" type="button" data-toggle="modal"
+            data-target="#countryModal">More info</button>
+        </div>
+      </div>
+    </li>
+  </template>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
